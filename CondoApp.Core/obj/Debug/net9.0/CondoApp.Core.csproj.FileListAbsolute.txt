@@ -1,0 +1,12 @@
+C:\guest-man\noclean\CondoApp.Core\bin\Debug\net9.0\CondoApp.Core.deps.json
+C:\guest-man\noclean\CondoApp.Core\bin\Debug\net9.0\CondoApp.Core.dll
+C:\guest-man\noclean\CondoApp.Core\bin\Debug\net9.0\CondoApp.Core.pdb
+C:\guest-man\noclean\CondoApp.Core\obj\Debug\net9.0\CondoApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\guest-man\noclean\CondoApp.Core\obj\Debug\net9.0\CondoApp.Core.AssemblyInfoInputs.cache
+C:\guest-man\noclean\CondoApp.Core\obj\Debug\net9.0\CondoApp.Core.AssemblyInfo.cs
+C:\guest-man\noclean\CondoApp.Core\obj\Debug\net9.0\CondoApp.Core.csproj.CoreCompileInputs.cache
+C:\guest-man\noclean\CondoApp.Core\obj\Debug\net9.0\CondoApp.Core.dll
+C:\guest-man\noclean\CondoApp.Core\obj\Debug\net9.0\refint\CondoApp.Core.dll
+C:\guest-man\noclean\CondoApp.Core\obj\Debug\net9.0\CondoApp.Core.pdb
+C:\guest-man\noclean\CondoApp.Core\obj\Debug\net9.0\ref\CondoApp.Core.dll
+C:\guest-man\noclean\CondoApp.Core\obj\Debug\net9.0\CondoApp.Core.csproj.AssemblyReference.cache
