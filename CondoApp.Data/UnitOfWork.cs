@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CondoApi.Infrastructure;
+using CondoApp.Core.Entities;
 using CondoApp.Core.Interfaces;
 using CondoApp.Data.Repositories;
 
@@ -16,6 +17,7 @@ public class UnitOfWork : IUnitOfWork
     public IUserRepository Users { get; }
     public IPersonRepository Persons { get; }
     public IApartmentRepository Apartments { get; }
+    public ITenantRepository Tenants { get; }
 
     public UnitOfWork(AppDbContext context)
     {
@@ -23,6 +25,7 @@ public class UnitOfWork : IUnitOfWork
         Users = new UserRepository(_context);
         Persons = new PersonRepository(_context);
         Apartments = new ApartmentRepository(_context);
+        Tenants = new TenantRepository(_context);
     }
 
     public async Task<int> CompleteAsync() => await _context.SaveChangesAsync();

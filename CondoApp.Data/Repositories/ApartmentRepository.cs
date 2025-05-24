@@ -12,8 +12,4 @@ public class ApartmentRepository : GenericRepository<Apartment>, IApartmentRepos
 {
     public ApartmentRepository(AppDbContext context) : base(context) { }
 
-    // public   Task<Apartment?> GetApartmentByNumberAsync(string number)
-    // {
-    //     // return await _context.Apartments.FirstOrDefaultAsync(a => a.Number == number);
-    // }
 }

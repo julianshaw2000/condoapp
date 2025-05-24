@@ -65,7 +65,6 @@ namespace CondoApp.WebApi.Controllers
                 UserId = user.Id,
                 UserName = user.UserName!,
                 Roles = roles,
-                // CondoId = user.CondoId
             };
 
             var token = _jwtService.GenerateToken(payload);

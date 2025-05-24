@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CondoApp.Core.DTOs.Auth;
+using CondoApp.Core.DTOs.Entities;
 using CondoApp.Core.Entities;
 
 namespace CondoApp.Core.Mappings
@@ -18,6 +19,10 @@ namespace CondoApp.Core.Mappings
             // .ForMember(dest => dest.FirstName, opt => opt.MapFrom(src => src.FirstName));
             CreateMap<LoginDto, ApplicationUser>().ReverseMap();
             CreateMap<ForgotPasswordDto, ApplicationUser>().ReverseMap();
+
+            CreateMap<Apartment, ApartmentDTO>().ReverseMap();
+            CreateMap<PersonDTO, Person>().ReverseMap();
+            CreateMap<TenantDTO, Tenant>().ReverseMap();
         }
     }
 }

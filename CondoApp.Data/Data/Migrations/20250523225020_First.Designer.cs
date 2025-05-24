@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CondoApp.Data.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250521154831_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250523225020_First")]
+    partial class First
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,7 @@ namespace CondoApp.Data.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("OwnerId")
+                    b.Property<int?>("OwnerId")
                         .HasColumnType("integer");
 
                     b.Property<string>("OwnerId1")
@@ -291,7 +291,7 @@ namespace CondoApp.Data.Data.Migrations
             modelBuilder.Entity("CondoApp.Core.Entities.Person", b =>
                 {
                     b.HasOne("CondoApp.Core.Entities.Apartment", "Apartment")
-                        .WithMany("Persons")
+                        .WithMany()
                         .HasForeignKey("ApartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -348,11 +348,6 @@ namespace CondoApp.Data.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("CondoApp.Core.Entities.Apartment", b =>
-                {
-                    b.Navigation("Persons");
                 });
 #pragma warning restore 612, 618
         }

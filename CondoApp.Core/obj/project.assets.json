@@ -907,11 +907,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj",
+      "projectUniqueName": "c:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj",
       "projectName": "CondoApp.Core",
-      "projectPath": "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj",
+      "projectPath": "c:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj",
       "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-      "outputPath": "C:\\guest-man\\noclean\\CondoApp.Core\\obj\\",
+      "outputPath": "c:\\guest-man\\CondoApp\\CondoApp.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",

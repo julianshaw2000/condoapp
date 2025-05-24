@@ -993,11 +993,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\guest-man\\noclean\\CondoApp.Data\\CondoApp.Data.csproj",
+      "projectUniqueName": "C:\\guest-man\\CondoApp\\CondoApp.Data\\CondoApp.Data.csproj",
       "projectName": "CondoApp.Data",
-      "projectPath": "C:\\guest-man\\noclean\\CondoApp.Data\\CondoApp.Data.csproj",
+      "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.Data\\CondoApp.Data.csproj",
       "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-      "outputPath": "C:\\guest-man\\noclean\\CondoApp.Data\\obj\\",
+      "outputPath": "C:\\guest-man\\CondoApp\\CondoApp.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1014,8 +1014,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj": {
-              "projectPath": "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj"
+            "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj": {
+              "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj"
             }
           }
         }

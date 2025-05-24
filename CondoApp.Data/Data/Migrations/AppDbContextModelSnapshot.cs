@@ -30,10 +30,7 @@ namespace CondoApp.Data.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("OwnerId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("OwnerId1")
+                    b.Property<string>("OwnerId")
                         .HasColumnType("text");
 
                     b.Property<string>("UnitNumber")
@@ -42,7 +39,7 @@ namespace CondoApp.Data.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OwnerId1");
+                    b.HasIndex("OwnerId");
 
                     b.ToTable("Apartments");
                 });
@@ -142,6 +139,32 @@ namespace CondoApp.Data.Data.Migrations
                     b.HasIndex("ApartmentId");
 
                     b.ToTable("Persons");
+                });
+
+            modelBuilder.Entity("CondoApp.Core.Entities.Tenant", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ContactEmail")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ContactPerson")
+                        .HasColumnType("text");
+
+                    b.Property<string>("TenantName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tenants");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -280,7 +303,7 @@ namespace CondoApp.Data.Data.Migrations
                 {
                     b.HasOne("CondoApp.Core.Entities.ApplicationUser", "Owner")
                         .WithMany()
-                        .HasForeignKey("OwnerId1");
+                        .HasForeignKey("OwnerId");
 
                     b.Navigation("Owner");
                 });
@@ -288,7 +311,7 @@ namespace CondoApp.Data.Data.Migrations
             modelBuilder.Entity("CondoApp.Core.Entities.Person", b =>
                 {
                     b.HasOne("CondoApp.Core.Entities.Apartment", "Apartment")
-                        .WithMany("Persons")
+                        .WithMany()
                         .HasForeignKey("ApartmentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -345,11 +368,6 @@ namespace CondoApp.Data.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("CondoApp.Core.Entities.Apartment", b =>
-                {
-                    b.Navigation("Persons");
                 });
 #pragma warning restore 612, 618
         }

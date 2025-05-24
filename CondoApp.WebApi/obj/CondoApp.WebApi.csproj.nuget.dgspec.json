@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\guest-man\\noclean\\condoapp.webapi\\CondoApp.WebApi.csproj": {}
+    "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj": {
+    "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj",
+        "projectUniqueName": "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj",
         "projectName": "CondoApp.Core",
-        "projectPath": "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj",
+        "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\guest-man\\noclean\\CondoApp.Core\\obj\\",
+        "outputPath": "C:\\guest-man\\CondoApp\\CondoApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -75,14 +75,14 @@
         }
       }
     },
-    "C:\\guest-man\\noclean\\CondoApp.Data\\CondoApp.Data.csproj": {
+    "C:\\guest-man\\CondoApp\\CondoApp.Data\\CondoApp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\guest-man\\noclean\\CondoApp.Data\\CondoApp.Data.csproj",
+        "projectUniqueName": "C:\\guest-man\\CondoApp\\CondoApp.Data\\CondoApp.Data.csproj",
         "projectName": "CondoApp.Data",
-        "projectPath": "C:\\guest-man\\noclean\\CondoApp.Data\\CondoApp.Data.csproj",
+        "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.Data\\CondoApp.Data.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\guest-man\\noclean\\CondoApp.Data\\obj\\",
+        "outputPath": "C:\\guest-man\\CondoApp\\CondoApp.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -99,8 +99,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj": {
-                "projectPath": "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj"
+              "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj": {
+                "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj"
               }
             }
           }
@@ -150,14 +150,14 @@
         }
       }
     },
-    "C:\\guest-man\\noclean\\condoapp.webapi\\CondoApp.WebApi.csproj": {
+    "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\guest-man\\noclean\\condoapp.webapi\\CondoApp.WebApi.csproj",
+        "projectUniqueName": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj",
         "projectName": "CondoApp.WebApi",
-        "projectPath": "C:\\guest-man\\noclean\\condoapp.webapi\\CondoApp.WebApi.csproj",
+        "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\guest-man\\noclean\\condoapp.webapi\\obj\\",
+        "outputPath": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -174,11 +174,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj": {
-                "projectPath": "C:\\guest-man\\noclean\\CondoApp.Core\\CondoApp.Core.csproj"
+              "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj": {
+                "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj"
               },
-              "C:\\guest-man\\noclean\\CondoApp.Data\\CondoApp.Data.csproj": {
-                "projectPath": "C:\\guest-man\\noclean\\CondoApp.Data\\CondoApp.Data.csproj"
+              "C:\\guest-man\\CondoApp\\CondoApp.Data\\CondoApp.Data.csproj": {
+                "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.Data\\CondoApp.Data.csproj"
               }
             }
           }

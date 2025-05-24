@@ -10,6 +10,7 @@ namespace CondoApp.Core.Interfaces
         IUserRepository Users { get; }
         IApartmentRepository Apartments { get; }
         IPersonRepository Persons { get; }
+        ITenantRepository Tenants { get; }
         Task<int> CompleteAsync(); // Save chang
     }
 
