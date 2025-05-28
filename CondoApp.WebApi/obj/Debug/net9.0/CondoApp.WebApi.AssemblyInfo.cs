@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("be9f24bd-388a-4b69-954d-5baf22482b4f")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CondoApp.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7b2ce497d83fc74771ef54e6cae2637aa4ab1249")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c13d96162b1632c49838a50235303ce8463cd927")]
 [assembly: System.Reflection.AssemblyProductAttribute("CondoApp.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CondoApp.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

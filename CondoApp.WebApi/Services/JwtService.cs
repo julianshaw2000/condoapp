@@ -28,7 +28,8 @@ namespace CondoApp.Core.Services
             {
                 new Claim(ClaimTypes.NameIdentifier, payload.UserId),
                 new Claim(ClaimTypes.Name, payload.UserName),
-                new Claim("CondoId", payload.CondoId?.ToString() ?? "")
+                // new Claim("CondoId", payload.CondoId?.ToString() ?? "")
+                new Claim("TenantId", payload.TenantId.ToString() ?? "")
             };
 
             foreach (var role in payload.Roles)

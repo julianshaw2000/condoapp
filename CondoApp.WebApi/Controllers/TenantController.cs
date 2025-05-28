@@ -70,8 +70,7 @@ namespace CondoApp.WebApi.Controllers
             await _tenantRepo.AddAsync(tenantEntity);
             await _unitOfWork.CompleteAsync();
             var createdDto = _mapper.Map<TenantDTO>(tenantEntity);
-            // If TenantDTO has Id, use it, else just return createdDto
-            return CreatedAtAction(nameof(GetTenantByIdAsync), new { id = (object)createdDto.GetType().GetProperty("Id")?.GetValue(createdDto) }, new ApiResponse<TenantDTO>
+            return Ok(new ApiResponse<TenantDTO>
             {
                 Success = true,
                 Message = "Tenant created successfully",

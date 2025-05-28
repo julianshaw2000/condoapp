@@ -30,8 +30,14 @@ namespace CondoApp.Data.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("OwnerId")
                         .HasColumnType("text");
+
+                    b.Property<int>("TenantId")
+                        .HasColumnType("integer");
 
                     b.Property<string>("UnitNumber")
                         .IsRequired()
@@ -40,6 +46,8 @@ namespace CondoApp.Data.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("OwnerId");
+
+                    b.HasIndex("TenantId");
 
                     b.ToTable("Apartments");
                 });
@@ -97,6 +105,9 @@ namespace CondoApp.Data.Data.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("text");
 
+                    b.Property<int>("TenantId")
+                        .HasColumnType("integer");
+
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("boolean");
 
@@ -124,19 +135,31 @@ namespace CondoApp.Data.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ApartmentId")
-                        .HasColumnType("integer");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
 
-                    b.Property<string>("FullName")
+                    b.Property<string>("FirstName")
                         .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("OwnerId")
                         .HasColumnType("text");
 
                     b.Property<int>("PersonType")
                         .HasColumnType("integer");
 
+                    b.Property<int>("TenantId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("ApartmentId");
+                    b.HasIndex("OwnerId");
+
+                    b.HasIndex("TenantId");
 
                     b.ToTable("Persons");
                 });
@@ -158,9 +181,13 @@ namespace CondoApp.Data.Data.Migrations
                     b.Property<string>("ContactPerson")
                         .HasColumnType("text");
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("TenantName")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(255)
+                        .HasColumnType("character varying(255)");
 
                     b.HasKey("Id");
 
@@ -310,13 +337,11 @@ namespace CondoApp.Data.Data.Migrations
 
             modelBuilder.Entity("CondoApp.Core.Entities.Person", b =>
                 {
-                    b.HasOne("CondoApp.Core.Entities.Apartment", "Apartment")
+                    b.HasOne("CondoApp.Core.Entities.ApplicationUser", "Owner")
                         .WithMany()
-                        .HasForeignKey("ApartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("OwnerId");
 
-                    b.Navigation("Apartment");
+                    b.Navigation("Owner");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

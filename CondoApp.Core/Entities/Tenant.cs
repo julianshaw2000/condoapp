@@ -12,5 +12,7 @@ namespace CondoApp.Core.Entities
         public string? Address { get; set; }
         public string? ContactPerson { get; set; }
         public string? ContactEmail { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

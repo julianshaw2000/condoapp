@@ -11,5 +11,6 @@ namespace CondoApp.Core.DTOs
         public string UserName { get; set; } = string.Empty;
         public IList<string> Roles { get; set; } = new List<string>();
         public Guid? CondoId { get; set; }
+        public int TenantId { get; set; }
     }
 }

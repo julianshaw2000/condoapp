@@ -1,0 +1,81 @@
+@Url = https://localhost:7224
+@Token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjMxMTg4YWRlLWRkNDEtNDA2OC05ZWQ1LWUyNzRkNjdhNzVhZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJ0ZXN0dXNlciIsIlRlbmFudElkIjoiMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6Ik9XTkVSIiwiZXhwIjoxNzQ4NDM1OTUzLCJpc3MiOiJDb25kb0FwaSIsImF1ZCI6IkNvbmRvQXBpQ2xpZW50In0.S9Tf-MOXe4B9HJa1LdIGHskj4cyDe0UP4qBreNH_S7M
+
+@OwnerID = 31188ade-dd41-4068-9ed5-e274d67a75ad
+
+### Register
+POST {{Url}}/api/auth/register
+Content-Type: application/json
+
+{
+  "userName": "testuser",
+  "email": "testuser@example.com",
+  "password": "Test@1234",
+  "fullName": "Julian Shaw",
+  "firstName": "Test",
+  "lastName": "User"
+}
+
+### Login
+POST {{Url}}/api/auth/login
+Content-Type: application/json
+
+{
+  "userName": "testuser",
+  "password": "Test@1234"
+}
+ 
+
+###
+
+
+### 🏠 Get Apartments for a tenant (replace with real token)
+GET {{Url}}/api/apartment
+X-TenantId: 5
+Authorization: Bearer {{Token}}
+Accept: application/json
+
+### 🏠 Create new Apartment
+POST {{Url}}/api/apartment
+Content-Type: application/json
+X-TenantId: 5
+Authorization: Bearer {{Token}}
+
+{
+  "id": 101,
+  "unitNumber": "101",
+  "ownerId": "{{OwnerID}}",
+  "tenantId": 5
+}
+
+
+
+### 🏠 Create new Apartment
+POST {{Url}}/api/apartments
+Content-Type: application/json
+X-TenantId: 5
+
+{
+  "unitNumber": "101",
+  "ownerId": 1,
+  "tenantId": 5
+}
+
+
+
+### 🏠 Update Apartment
+PUT {{Url}}/api/apartments/1
+Content-Type: application/json
+X-TenantId: 5
+Authorization: Bearer {{Token}}
+
+{
+  "unitNumber": "202",
+  "ownerId": 2,
+  "tenantId": 5
+}
+
+### 🏠 Delete Apartment
+DELETE {{Url}}/api/apartments/1
+X-TenantId: 5
+Authorization: Bearer {{Token}}

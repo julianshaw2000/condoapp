@@ -10,9 +10,13 @@ namespace CondoApp.Core.Entities
 
     {
         public int Id { get; set; }
+        public int TenantId { get; set; }
+        // public Tenant Tenant { get; set; }
         public string UnitNumber { get; set; } = string.Empty;
         public string? OwnerId { get; set; }
         public ApplicationUser? Owner { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 
 }

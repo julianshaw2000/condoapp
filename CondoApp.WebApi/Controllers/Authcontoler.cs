@@ -62,6 +62,7 @@ namespace CondoApp.WebApi.Controllers
 
             var payload = new UserTokenPayload
             {
+                TenantId = user.TenantId,
                 UserId = user.Id,
                 UserName = user.UserName!,
                 Roles = roles,

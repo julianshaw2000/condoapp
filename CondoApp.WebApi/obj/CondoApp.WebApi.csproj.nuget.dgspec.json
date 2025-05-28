@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj": {}
+    "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\CondoApp.WebApi.csproj": {}
   },
   "projects": {
     "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj": {
@@ -49,6 +49,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -125,6 +129,10 @@
               "target": "Package",
               "version": "[9.0.5, )"
             },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[9.0.4, )"
@@ -150,14 +158,14 @@
         }
       }
     },
-    "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj": {
+    "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\CondoApp.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj",
+        "projectUniqueName": "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\CondoApp.WebApi.csproj",
         "projectName": "CondoApp.WebApi",
-        "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj",
+        "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\CondoApp.WebApi.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\obj\\",
+        "outputPath": "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",

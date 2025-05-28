@@ -1,0 +1,25 @@
+@access_token = sfsdfsfsf
+
+### Get all Apartments for this Tenant
+GET http://localhost:5000/api/apartments
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+###
+
+### Create a new Apartment
+POST http://localhost:5000/api/apartments
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+  "unitNumber": "101",
+  "tenantId": 1,
+  "ownerId": "1234abcd-5678-efgh-ijkl-0987mnopqrst"
+}
+
+###
+
+### Delete an Owner (should set Apartment.OwnerId to NULL)
+DELETE http://localhost:5000/api/users/ownerIdToDelete
+Authorization: Bearer {{access_token}}

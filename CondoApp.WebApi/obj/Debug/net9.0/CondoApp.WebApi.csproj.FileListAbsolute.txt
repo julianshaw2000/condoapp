@@ -293,3 +293,9 @@ C:\guest-man\CondoApp\CondoApp.WebApi\obj\Debug\net9.0\refint\CondoApp.WebApi.dl
 C:\guest-man\CondoApp\CondoApp.WebApi\obj\Debug\net9.0\CondoApp.WebApi.pdb
 C:\guest-man\CondoApp\CondoApp.WebApi\obj\Debug\net9.0\CondoApp.WebApi.genruntimeconfig.cache
 C:\guest-man\CondoApp\CondoApp.WebApi\obj\Debug\net9.0\ref\CondoApp.WebApi.dll
+C:\guest-man\CondoApp\CondoApp.WebApi\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\guest-man\CondoApp\CondoApp.WebApi\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\guest-man\CondoApp\CondoApp.WebApi\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+C:\guest-man\CondoApp\CondoApp.WebApi\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\guest-man\CondoApp\CondoApp.WebApi\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\guest-man\CondoApp\CondoApp.WebApi\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll

@@ -47,7 +47,7 @@ namespace CondoApp.WebApi.Controllers
             var apartment = await _apartmentRepo.GetByIdAsync(id);
             if (apartment == null)
             {
-                return Ok(new ApiResponse<ApartmentDTO>
+                return NotFound(new ApiResponse<ApartmentDTO>
                 {
                     Success = false,
                     Message = "Apartment not found"
@@ -70,7 +70,8 @@ namespace CondoApp.WebApi.Controllers
             await _apartmentRepo.AddAsync(apartmentEntity);
             await _unitOfWork.CompleteAsync();
             var createdDto = _mapper.Map<ApartmentDTO>(apartmentEntity);
-            return CreatedAtAction(nameof(GetApartmentByIdAsync), new { id = createdDto.Id }, new ApiResponse<ApartmentDTO>
+
+            return Ok(new ApiResponse<ApartmentDTO>
             {
                 Success = true,
                 Message = "Apartment created successfully",

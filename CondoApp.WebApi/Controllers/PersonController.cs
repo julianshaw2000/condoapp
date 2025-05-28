@@ -71,7 +71,7 @@ namespace CondoApp.WebApi.Controllers
             await _unitOfWork.CompleteAsync();
             var createdDto = _mapper.Map<PersonDTO>(personEntity);
             // If PersonDTO has Id, use it, else just return createdDto
-            return CreatedAtAction(nameof(GetPersonByIdAsync), new { id = (object)createdDto.GetType().GetProperty("Id")?.GetValue(createdDto) }, new ApiResponse<PersonDTO>
+            return Ok(new ApiResponse<PersonDTO>
             {
                 Success = true,
                 Message = "Person created successfully",

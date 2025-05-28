@@ -9,11 +9,12 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
-using CondoApp.Data.Data.Seed; 
+using CondoApp.Data.Data.Seed;
+using CondoApp.WebApi.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
- 
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -75,6 +76,8 @@ builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 // Register AutoMapper and scan for profiles in all assemblies
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ITenantProvider, TenantProvider>();
 
 
 

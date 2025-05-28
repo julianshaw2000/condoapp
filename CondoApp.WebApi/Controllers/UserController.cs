@@ -64,7 +64,7 @@ namespace CondoApp.WebApi.Controllers
             await _userRepo.AddAsync(user);
             await _unitOfWork.CompleteAsync();
             // If ApplicationUser has Id, use it, else just return user
-            return CreatedAtAction(nameof(GetUserByIdAsync), new { id = user.Id }, new ApiResponse<ApplicationUser>
+            return Ok(new ApiResponse<ApplicationUser>
             {
                 Success = true,
                 Message = "User created successfully",
