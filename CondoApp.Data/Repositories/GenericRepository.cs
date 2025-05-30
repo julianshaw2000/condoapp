@@ -1,5 +1,5 @@
 
-using CondoApi.Infrastructure;
+using CondoApp.Data;
 using CondoApp.Core.Interfaces;
 using Microsoft.EntityFrameworkCore;
 

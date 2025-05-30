@@ -13,6 +13,8 @@ namespace CondoApp.Core.Interfaces
         /// </summary>
         /// <returns>The TenantId as a string (could be Guid or numeric ID).</returns>
         int GetTenantId();
+
+        bool IsSuperAdmin();
     }
 
 }

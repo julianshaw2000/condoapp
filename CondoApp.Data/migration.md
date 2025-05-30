@@ -1,4 +1,4 @@
-Remove-Item -Recurse -Force .\CondoApi.Infrastructure\Persistence\Migrations
+Remove-Item -Recurse -Force .\CondoApp.Data\Persistence\Migrations
 
 
 dotnet ef migrations add InitialCreate `

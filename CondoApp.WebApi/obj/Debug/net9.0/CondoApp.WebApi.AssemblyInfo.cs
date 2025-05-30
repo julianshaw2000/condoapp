@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CondoApp.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c13d96162b1632c49838a50235303ce8463cd927")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+29a64ff6bfe90c618cd0748feca774d53a553462")]
 [assembly: System.Reflection.AssemblyProductAttribute("CondoApp.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CondoApp.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

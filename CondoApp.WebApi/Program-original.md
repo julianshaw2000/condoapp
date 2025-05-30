@@ -1,4 +1,5 @@
 using System.Text;
+using CondoApp.Data;
 using CondoApp.Core.Entities;
 using CondoApp.Core.Interfaces;
 using CondoApp.Core.Services;
@@ -11,14 +12,16 @@ using AutoMapper;
 using CondoApp.Data.Data.Seed;
 using CondoApp.WebApi.Models;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Controllers and Swagger
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// 🔐 CORS
+
+// 🔐 Add CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
@@ -28,6 +31,7 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader();
     });
 });
+
 
 // 🔐 JWT Authentication
 builder.Services.AddAuthentication(options =>
@@ -51,12 +55,13 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// Database connection
+
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
 
-// 🔐 Identity
+// 🔐 Identity Setup
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
@@ -64,37 +69,42 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 // 💼 Dependency Injection for custom services
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IJwtService, JwtService>();
+
+// builder.Services.AddHttpContextAccessor(); // Needed to read claims from JWT
+// builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
+
+// Register AutoMapper and scan for profiles in all assemblies
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ITenantProvider, TenantProvider>();
 
 
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(connectionString));
-
-// Register AutoMapper
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
-app.UseDeveloperExceptionPage();
-
-
 app.UseMiddleware<GlobalExceptionHandlerMiddleware>();
 
-// Pipeline configuration
+
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    // app.MapOpenApi();
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");
-app.UseAuthentication();
+
+
+app.UseAuthentication(); // 🔐 This must be before UseAuthorization
 app.UseAuthorization();
+
 app.MapControllers();
 
-// 🔴 Seed default roles and SuperAdmin user
+
+// Seed default roles (SuperAdmin, Admin, Owner)
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;

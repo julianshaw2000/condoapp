@@ -1,0 +1,116 @@
+@baseUrl = https://localhost:7224
+
+
+### 🏠 GET Apartments (as OWNER)
+GET {{baseUrl}}/api/apartment/test
+X-TenantId: 5
+Accept: application/json
+
+###
+
+
+### 🔐 Register a new user
+POST {{baseUrl}}/api/auth/register
+Content-Type: application/json
+
+{
+  "userName": "testuser2",
+  "email": "testuser2@example.com",
+  "password": "Test@1234",
+  "fullName": "Julian Shaw",
+  "firstName": "Test",
+  "lastName": "User"
+}
+
+###
+
+### 🔑 Login to get a token
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "userName": "testuser2",
+  "password": "Test@1234"
+}
+
+###  
+# Copy the token from the login response and paste it below:
+@tenantToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImIwNGRhZWQ0LTkxNWUtNDJlZi05ZTNiLTI3NTMwMTk3NDU1YiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJ0ZXN0dXNlcjIiLCJUZW5hbnRJZCI6IjAiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJPV05FUiIsImV4cCI6MTc0ODYwNDU4MSwiaXNzIjoiQ29uZG9BcHAiLCJhdWQiOiJDb25kb0FwcENsaWVudCJ9.qLUncSRlPl8N8eR8opmVdiTbpGxJZkLhsRfhvT_bizA
+### 🏠 GET Apartments (as OWNER)
+GET {{baseUrl}}/api/apartment
+X-TenantId: 5
+Authorization: Bearer {{tenantToken}}
+Accept: application/json
+
+###
+
+
+
+
+
+
+### 🏠 GET Apartments (as OWNER)
+GET {{baseUrl}}/api/apartment
+X-TenantId: 5
+Accept: application/json
+
+###
+
+
+### 🏠 CREATE new Apartment (as OWNER)
+POST {{baseUrl}}/api/apartment
+Content-Type: application/json
+X-TenantId: 5
+Authorization: Bearer {{tenantToken}}
+
+{
+  "unitNumber": "101",
+  "ownerId": "31188ade-dd41-4068-9ed5-e274d67a75ad",
+  "tenantId": 5
+}
+
+###
+
+### 🏠 UPDATE Apartment (as OWNER)
+PUT {{baseUrl}}/api/apartment/1
+Content-Type: application/json
+X-TenantId: 5
+Authorization: Bearer {{tenantToken}}
+
+{
+  "unitNumber": "202",
+  "ownerId": "31188ade-dd41-4068-9ed5-e274d67a75ad",
+  "tenantId": 5
+}
+
+###
+
+### 🏠 DELETE Apartment (as OWNER)
+DELETE {{baseUrl}}/api/apartment/1
+X-TenantId: 5
+Authorization: Bearer {{tenantToken}}
+
+###
+
+
+
+### 🔑 Login superadmin to get a token
+POST {{baseUrl}}/api/auth/login
+Content-Type: application/json
+
+{
+  "userName": "superadmin@condojam.com",
+  "password": "Gl@ria100"
+}
+
+
+### 🟡 TEST as SUPERADMIN (no X-TenantId required)
+# Replace with your SuperAdmin JWT
+@superAdminToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjdjZTE4ZDE5LTYzNDUtNDI0ZS1iZTE5LWJmMjVjYmNmZWU3OCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJzdXBlcmFkbWluQGNvbmRvamFtLmNvbSIsIlRlbmFudElkIjoiMCIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlNVUEVSQURNSU4iLCJleHAiOjE3NDg1MzUyMDUsImlzcyI6IkNvbmRvQXBpIiwiYXVkIjoiQ29uZG9BcGlDbGllbnQifQ.x9VGCuW7SNYUlE4xIdH4vTBwaRBOQEdoqHT07a73mm4
+### 🏠 GET all Apartments (as SUPERADMIN)
+GET {{baseUrl}}/api/apartment
+Authorization: Bearer {{superAdminToken}}
+X-TenantId: 0
+Accept: application/json
+
+###

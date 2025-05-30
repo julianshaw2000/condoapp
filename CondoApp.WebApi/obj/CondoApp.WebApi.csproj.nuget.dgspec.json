@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\CondoApp.WebApi.csproj": {}
+    "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj": {}
   },
   "projects": {
     "C:\\guest-man\\CondoApp\\CondoApp.Core\\CondoApp.Core.csproj": {
@@ -158,14 +158,14 @@
         }
       }
     },
-    "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\CondoApp.WebApi.csproj": {
+    "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\CondoApp.WebApi.csproj",
+        "projectUniqueName": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj",
         "projectName": "CondoApp.WebApi",
-        "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\CondoApp.WebApi.csproj",
+        "projectPath": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\obj\\",
+        "outputPath": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",

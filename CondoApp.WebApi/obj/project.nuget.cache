@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HlWAxnbnu9I=",
+  "dgSpecHash": "vhz1R65hfgY=",
   "success": true,
-  "projectFilePath": "C:\\guest-man\\CondoApp\\CondoApp.WebApi\\CondoApp.WebApi.csproj",
+  "projectFilePath": "C:\\guest-man\\CondoApp\\CondoApp.webApi\\CondoApp.WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julia\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
